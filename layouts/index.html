@@ -1,0 +1,98 @@
+{{ define "main"}}
+<style>
+    .post_list{
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        margin: 3em 10em 0 10em;
+        gap: 3em 3em 3em 3em;
+        
+    }
+    .single{
+        width: 30em;
+        color: white;
+        margin: 1em;
+
+    }
+    .content{
+        margin: 1em;
+    }
+    .summary{
+        font-size: 15px;
+    }
+    .tag_icon{
+        width: 17px;
+        margin: 0 .3em 0 0;
+       
+    }
+    .tags{
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        border: 1px solid white;
+        padding: .3em;
+        margin: .7em;
+        vertical-align: middle;
+        border-radius: 15px;
+    }
+
+    .tags:hover{
+        background-color: white;
+        color: black;
+    }
+
+    time{
+        font-size: 15px;
+        width: 14px;
+    }
+
+    .post_image{
+        max-width: 100%;
+    }
+   .title{
+    text-decoration: none;
+    color: rgb(84, 100, 196);
+}
+</style>
+
+<section class="post_list   ">
+    {{ range .Paginator.Pages}}
+    <article href="{{ .Permalink }}" class="single">
+        <a href="{{ .Permalink }}"><img class="post_image" src="{{ .Params.featured_image }}" alt="post"></a>
+        <div class="content">
+            <h2 class="entry_title">
+                <a class="title" href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+            <div class="post_meta">
+                <div class="post_date">
+                    <time>{{ dateFormat .Site.Params.dateFormat .Date}}</time>
+                </div>
+                
+                <div class="post_author">
+                    posted by: {{ .Params.author }}
+                </div>
+            </div>
+            <p class="summary">
+                {{ .Summary }}
+            </p>
+            <div class="post_tags">
+                
+                {{ range (.GetTerms "tags") }}
+                   <a class="tags" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                
+                    {{ end }}
+                
+               
+            </div>
+
+        </div>
+        
+        
+        
+    </article>
+
+    {{ end }}
+
+</section>
+{{ end }}

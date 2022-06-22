@@ -1,0 +1,8 @@
+baseURL = 'http://example.org/'
+languageCode = 'es-ES'
+title = 'My New Hugo Site'
+
+summaryLength = 30
+
+[Params]
+dateFormat = "jan 2, 2006"
