@@ -1,98 +1,37 @@
-{{ define "main"}}
-<style>
-    .post_list{
-        display: flex;
-        justify-content: space-between;
-        box-sizing: border-box;
-        flex-wrap: wrap;
-        margin: 3em 10em 0 10em;
-        gap: 3em 3em 3em 3em;
-        
-    }
-    .single{
-        width: 30em;
-        color: white;
-        margin: 1em;
+{{ define "main" }}
 
-    }
-    .content{
-        margin: 1em;
-    }
-    .summary{
-        font-size: 15px;
-    }
-    .tag_icon{
-        width: 17px;
-        margin: 0 .3em 0 0;
-       
-    }
-    .tags{
-        text-decoration: none;
-        color: white;
-        font-size: 12px;
-        border: 1px solid white;
-        padding: .3em;
-        margin: .7em;
-        vertical-align: middle;
-        border-radius: 15px;
-    }
-
-    .tags:hover{
-        background-color: white;
-        color: black;
-    }
-
-    time{
-        font-size: 15px;
-        width: 14px;
-    }
-
-    .post_image{
-        max-width: 100%;
-    }
-   .title{
-    text-decoration: none;
-    color: rgb(84, 100, 196);
-}
-</style>
-
-<section class="post_list   ">
+<ul class="cards">
     {{ range .Paginator.Pages}}
-    <article href="{{ .Permalink }}" class="single">
-        <a href="{{ .Permalink }}"><img class="post_image" src="{{ .Params.featured_image }}" alt="post"></a>
-        <div class="content">
-            <h2 class="entry_title">
-                <a class="title" href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
-            <div class="post_meta">
-                <div class="post_date">
-                    <time>{{ dateFormat .Site.Params.dateFormat .Date}}</time>
-                </div>
-                
-                <div class="post_author">
-                    posted by: {{ .Params.author }}
-                </div>
-            </div>
-            <p class="summary">
-                {{ .Summary }}
-            </p>
-            <div class="post_tags">
-                
-                {{ range (.GetTerms "tags") }}
-                   <a class="tags" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-                
-                    {{ end }}
-                
-               
-            </div>
+    <li class="cards__item">
+      <article class="mb-5">
+      <div class="card">
+        <a   href="{{.Permalink}}"><img class="card__image  mb-3" src="{{ .Params.featured_image }}" alt=""></a>
+        <div class="post_tags"> 
+          <ul class="post_meta mb-3">
+            <li class="list-inline-item mr-3">
+              <i class="bi bi-clock mr-2"></i><time>{{ dateFormat .Site.Params.dateFormat .Date}}</time>
+            </li>
+            <li class="list-inline-item mr-3">
+              <i class="bi bi-archive mr-1"></i>
+              {{ range (.GetTerms "tags") }}
+                <a class="ml-1" href="{{ .Permalink }}">{{ .LinkTitle }}</a>   
+              {{ end }}
+            </li>
+          </ul>
 
         </div>
-        
-        
-        
+        <h3 class="h3 mb-3">
+          <a class="card__title" href="{{ .Permalink }}">{{.Title}}</a>
+        </h3>
+
+
+
+          <p class="card__text">{{ .Summary }}</p>
+          <a href="https://demo.gethugothemes.com/galaxy/site/post/post-2/" class="btn btn-primary">Read More<i class="ti-arrow-right ml-2"></i></a>
+      </div>
     </article>
+    </li>
+    {{end}}
+  </ul>    
 
-    {{ end }}
-
-</section>
 {{ end }}

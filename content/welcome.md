@@ -11,6 +11,5 @@ featured_image = "images/hugo.png"
 
 # Tu zabe quillo a ve zi aprendemo de esto
 
-
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+en este blog siempre se habla de tu sabes de ciber seguridad y estas cosas
+en este dia vamos a realizar la maquina blue

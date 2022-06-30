@@ -1,8 +1,7 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://hz.com/'
 languageCode = 'es-ES'
-title = 'My New Hugo Site'
-
-summaryLength = 30
+title = 'HackingZone | Blog de ciberseguridad'
+summaryLength = 10
 
 [Params]
 dateFormat = "jan 2, 2006"

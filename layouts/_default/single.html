@@ -1,29 +1,4 @@
 {{ define "main"}}
-<style>
-    .single{
-        max-width: calc(1000px - (30px * 2));
-        padding-right: 30px;
-        padding-left: 30px;
-        margin-right: auto;
-        margin-left: auto;
-        color: white;
-    }
-    .header_img{
-        margin: 4em 0 0 0;
-        
-    }
-    .entry_title{
-        margin: 3em 0 3em 0;
-        text-align: center;
-    }
-    time{
-        font-size: 15px;
-        width: 14px;
-    }
-
-</style>
-
-
 <article class="single">
     <img class="header_img" src="/{{.Params.featured_image}}" alt="hugo">
     <h1 class="entry_title">{{ .Title }}</h1>

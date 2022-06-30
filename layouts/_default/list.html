@@ -1,56 +1,5 @@
 {{ define "main"}}
-<style>
-    .post_list{
-        display: flex;
-        margin: 2em;
-        box-sizing: border-box;
-        flex-wrap: wrap;
-        margin: 3em 5em 0 5em;
-        gap: 3em 3em 3em 3em;
-    }
-    .single{
-        width: 30em;
-        color: white;
-        margin: 1em;
 
-    }
-    .content{
-        margin: 1em;
-    }
-    .summary{
-        font-size: 15px;
-    }
-    .tag_icon{
-        width: 17px;
-        margin: 0 .3em 0 0;
-       
-    }
-    .tags{
-        text-decoration: none;
-        color: white;
-        font-size: 12px;
-        border: 1px solid white;
-        padding: .3em;
-        margin: .7em;
-        vertical-align: middle;
-        border-radius: 15px;
-    }
-
-    .tags:hover{
-        background-color: white;
-        color: black;
-    }
-
-    time{
-        font-size: 15px;
-        width: 14px;
-    }
-
-    .post_image{
-        max-width: 100%;
-    }
-   
-</style>
 
 <section class="post_list   ">
     {{ range .Paginator.Pages}}

@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Montserrat:wght@400;500&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+
+$gray-darker:               #444444;
+$gray-dark:                 #696969;
+$gray:                      #1a191e;
+$gray-light:                #cccccc;
+$gray-lighter:              #ececec;
+$gray-lightest:             lighten($gray-lighter,4%);
+$black:                     #000000;             
+$red:                        #E4112F;
+$orange:                      #FFAC41;
+
+
+body{
+    border-radius: 0;
+    background-color: $gray;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    color: #B0B0B0;
+}
+
+
+.navbar{
+    background-color: rgb(73, 73, 73);
+  }
+
+
+
+// // // // // // // // // single  // // // // // // // // // // // // 
+
+
+
+
+////////////////////////////blog
+/// 
+
+
+  
+
+
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 400px;
+  }
+  
+
+
+  .cards__item {
+    display: flex;
+    padding: 1rem;
+    @media(min-width: 40rem) {
+      width: 50%;
+    }
+    @media(min-width: 56rem) {
+      width: 33.3333%;
+    }
+  }
+  
+  .card {
+    border: none;
+    background-color: $gray;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+      .card__image {
+        filter: contrast(100%);
+      }
+    }
+  }
+  
+  .card__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .card__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:0px 0px 0px 0px;
+
+    filter: contrast(70%);
+    //filter: saturate(180%);
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 56.25%; // 16:9 aspect ratio
+    }
+    @media(min-width: 40rem) {
+      &::before {
+        padding-top: 66.6%; // 3:2 aspect ratio
+      }
+    }
+  }
+  
+  
+  
+  .card__title, .card__title:hover {
+    color: $gray-lighter;
+    font-size: 30px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+
+    text-transform: uppercase;
+  }
+  
+  .card__text, .card__text:hover {
+    // flex: 1 1 auto;
+    // font-size: 0.875rem;
+    // font-weight: 400;
+    // font-size: 16px;
+    // line-height: 1.5;
+    // margin-bottom: 1.25rem;
+    font-weight: 400;
+    color: #B0B0B0;
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+
+  }
+  .post_meta i {
+    color: #E4112F;
+}

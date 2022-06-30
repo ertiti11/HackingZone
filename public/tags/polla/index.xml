@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>polla on HackingZone | Blog de ciberseguridad</title>
+    <link>http://hz.com/tags/polla/</link>
+    <description>Recent content in polla on HackingZone | Blog de ciberseguridad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Tue, 21 Jun 2022 00:38:15 +0200</lastBuildDate><atom:link href="http://hz.com/tags/polla/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome</title>
+      <link>http://hz.com/welcome/</link>
+      <pubDate>Tue, 21 Jun 2022 00:38:15 +0200</pubDate>
+      
+      <guid>http://hz.com/welcome/</guid>
+      <description>Tu zabe quillo a ve zi aprendemo de esto &amp;ldquo;Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit&amp;hellip;&amp;rdquo; &amp;ldquo;There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain&amp;hellip;&amp;rdquo;</description>
+    </item>
+    
+  </channel>
+</rss>
